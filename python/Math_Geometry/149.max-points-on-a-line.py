@@ -26,5 +26,6 @@ class Solution:
             res = max(res, curMax + duplicate)
         return res
 
+
 a = Solution()
-print(a.maxPoints([[1,1],[2,2],[3,3]]))
+print(a.maxPoints([[1, 1], [2, 2], [3, 3]]))

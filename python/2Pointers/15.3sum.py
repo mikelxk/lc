@@ -22,3 +22,18 @@ class Solution:
                     while nums[l] == nums[l - 1] and l < r:
                         l += 1
         return res
+
+
+class Solution2:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res, dups = set(), set()
+        seen = {}
+        for i, vali in enumerate(nums):
+            if vali not in dups:
+                dups.add(vali)
+                for valj in nums[i + 1 :]:
+                    complement = -vali - valj
+                    if complement in seen and seen[complement] == i:
+                        res.add(tuple(sorted((vali, valj, complement))))
+                    seen[valj] = i
+        return res

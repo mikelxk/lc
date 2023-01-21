@@ -11,12 +11,12 @@ class Solution:
             if v >= 2:
                 v = 2
             newW1.append(v * k)
-        word1 = ''.join(newW1)
+        word1 = "".join(newW1)
         for k, v in s2.items():
             if v >= 2:
                 v = 2
             newW2.append(v * k)
-        word2 = ''.join(newW2)
+        word2 = "".join(newW2)
         n1 = len(word1)
         n2 = len(word2)
         for i in range(n1):

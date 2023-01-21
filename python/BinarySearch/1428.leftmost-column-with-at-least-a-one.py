@@ -1,9 +1,9 @@
 class BinaryMatrix(object):
     def get(self, row: int, col: int) -> int:
-        return 0
+        ...
 
     def dimensions(self) -> list[int]:
-        return []
+        ...
 
 
 class Solution:

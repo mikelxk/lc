@@ -10,6 +10,8 @@ class Solution:
             elif i < 0:
                 neg += 1
         return max(pos, neg)
+
+
 a = Solution()
-b = a.maximumCount([-2,-1,-1,1,2,3])
+b = a.maximumCount([-2, -1, -1, 1, 2, 3])
 print(b)
