@@ -14,4 +14,20 @@ function permute(nums: number[]): number[][] {
     }
   }
 }
-console.log(permute([0,1]))
+function per(nums: number[]): number[][] {
+  let res: number[][] = []
+  let n = nums.length
+  if (n === 1) {
+    return [[nums[0]]]
+  }
+  for (let i = 0; i < n; ++i) {
+    let n = nums[i]
+    let remaining = nums.filter(x => x != n)
+    let perms = per(remaining)
+    for (let p of perms) {
+      res.push([...p, n])
+    }
+  }
+  return res
+}
+console.log(per([0, 1]))
