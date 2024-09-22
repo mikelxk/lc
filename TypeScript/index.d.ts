@@ -10,3 +10,10 @@ declare interface ListNode {
   constructor(val?: number, next?: ListNode | null)
 }
 
+declare class _Node {
+  val: number
+  left: _Node | null
+  right: _Node | null
+  next: _Node | null
+  constructor(val?: number, left?: _Node, right?: _Node, next?: _Node)
+}
