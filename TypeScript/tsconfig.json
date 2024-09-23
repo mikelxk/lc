@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "target": "ESNext",
     "module": "ESNext",
-    "types": ["bun-types"],
-    "moduleResolution": "Node16"
+    "moduleDetection": "force",
+    "types": [
+      "bun-types"
+    ],
+    "moduleResolution": "Node16",
+    "forceConsistentCasingInFileNames": true,
   }
 }
