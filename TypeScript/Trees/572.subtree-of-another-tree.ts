@@ -6,12 +6,14 @@ function isSubtree(root: TreeNode | null, subRoot: TreeNode | null): boolean {
     if (!n1 || !n2) {
       return false
     }
-    return same(n1.left, n2.left) && same(n1.right, n2.right)
+    return (
+      same(n1.left, n2.left) && same(n1.right, n2.right) && n1.val == n2.val
+    )
   }
-  function DFS(node: TreeNode | null) {
+  function dfs (node: TreeNode | null) {
     if (!node) return false
     if (same(node, subRoot)) return true
-    return DFS(node.left) || DFS(node.right)
+    return dfs(node.left) || dfs(node.right)
   }
-  return DFS(root)
+  return dfs(root)
 }

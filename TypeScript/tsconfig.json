@@ -5,7 +5,7 @@
       "DOM"
     ],
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "Node16",
     "moduleDetection": "force",
     "types": [
       "bun-types"

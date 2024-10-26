@@ -41,3 +41,24 @@ function combinationSum2(candidates: number[], target: number): number[][] {
     dfs(i + 1, cur, total)
   }
 }
+function combinationSum1(candidates: number[], target: number): number[][] {
+  candidates.sort((a, b) => a - b)
+  let res = []
+  backtrack([], 0)
+  function backtrack(cur, start) {
+    let sum = cur.reduce((a, b) => a + b, 0)
+    if (sum == target) {
+      res.push(cur)
+      return
+    }
+    for (let i = start; i < candidates.length; ++i) {
+      let n = candidates[i]
+      if (n + sum > target) {
+        continue
+      }
+      backtrack([...cur, n], i)
+    }
+  }
+  return res
+}
+combinationSum1([2, 3, 6, 7], 7)
